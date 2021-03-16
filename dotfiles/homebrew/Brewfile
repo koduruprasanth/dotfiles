@@ -1,0 +1,39 @@
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+
+cask_args appdir: "~/Applications", require_sha: true
+
+brew "bat"
+brew "fd"
+brew "git"
+brew "gitui"
+brew "lazydocker"
+brew "lazygit"
+brew "htop"
+brew "mas"
+brew "starship"
+brew "pyenv"
+brew "tmux"
+brew "wget"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
+brew "zsh"
+brew "zsh-syntax-highlighting"
+
+cask "1password"
+cask "alfred"
+cask "docker"
+cask "firefox"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "sizeup"
+cask "visual-studio-code"
+# cask "font-jetbrains-mono-nerd-font"
+cask "microsoft-edge"
+
+mas "Amphetamine", id: 937984704
+mas "Screen Shade", id: 450429264

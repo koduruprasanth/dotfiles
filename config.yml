@@ -10,7 +10,20 @@ config:
   longkey: false
   showdiff: true
   workdir: ~/.config/dotdrop
+actions:
+  pre:
+    install_xcodecli: actions/install_xcodecli.sh
+    install_homebrew: actions/install_homebrew.sh
+  post:
+    install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
 dotfiles:
+  f_brewbundle:
+    dst: ~/.config/homebrew/Brewfile
+    src: homebrew/Brewfile
+    actions:
+    - install_xcodecli
+    - install_homebrew
+    - install_homebrew_bundle
   f_gitconfig:
     dst: ~/.gitconfig
     src: git/.gitconfig
@@ -35,6 +48,7 @@ dotfiles:
 profiles:
   prasanthk-mac:
     dotfiles:
+    - f_brewbundle
     - f_gitconfig
     - f_gitignore_global
     - f_tmux.conf
