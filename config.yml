@@ -1,0 +1,26 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+  showdiff: true
+  workdir: ~/.config/dotdrop
+dotfiles:
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: git/.gitconfig
+  f_gitignore_global:
+    src: git/.gitignore_global
+    dst: ~/.gitignore_global
+profiles:
+  prasanthk-mac:
+    dotfiles:
+    - f_gitconfig
+    - f_gitignore_global
+
+# eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac

@@ -1,0 +1,8 @@
+
+# {{@@ header() @@}}
+
+# IDE specific configurations
+.idea/
+
+# Pyenv
+.python-version

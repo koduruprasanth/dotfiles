@@ -1,0 +1,15 @@
+# {{@@ header() @@}}
+
+[user]
+    email = {{@@ env['git_email'] @@}}
+    name = {{@@ env['git_name'] @@}}
+[color]
+    ui = true
+[alias]
+    stahs = "stash"
+[core]
+    excludesfile = {{@@ env['HOME'] @@}}/.gitignore_global
+[pull]
+    rebase = true
+[init]
+    defaultBranch = main
