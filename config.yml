@@ -29,6 +29,9 @@ dotfiles:
   d_zsh:
     dst: ~/.zsh
     src: shells/zsh/.zsh
+  f_starship:
+    dst: ~/.config/starship.toml
+    src: shells/prompts/starship.toml
 profiles:
   prasanthk-mac:
     dotfiles:
@@ -38,5 +41,6 @@ profiles:
     - f_zshenv
     - f_zshrc
     - d_zsh
+    - f_starship
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac
