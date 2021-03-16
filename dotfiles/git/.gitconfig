@@ -7,6 +7,7 @@
     ui = true
 [alias]
     stahs = "stash"
+    st = "status"
 [core]
     excludesfile = {{@@ env['HOME'] @@}}/.gitignore_global
 [pull]

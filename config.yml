@@ -15,16 +15,28 @@ dotfiles:
     dst: ~/.gitconfig
     src: git/.gitconfig
   f_gitignore_global:
+    dst: ~/.gitignore_globalå
     src: git/.gitignore_global
-    dst: ~/.gitignore_global
   f_tmux.conf:
     dst: ~/.tmux.conf
     src: tmux/.tmux.conf
+  f_zshrc:
+    dst: ~/.zshrc
+    src: shells/zsh/.zshrc
+  f_zshenv:
+    dst: ~/.zshenv
+    src: shells/zsh/.zshenv
+  d_zsh:
+    dst: ~/.zsh
+    src: shells/zsh/.zsh
 profiles:
   prasanthk-mac:
     dotfiles:
     - f_gitconfig
     - f_gitignore_global
     - f_tmux.conf
+    - f_zshenv
+    - f_zshrc
+    - d_zsh
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac
