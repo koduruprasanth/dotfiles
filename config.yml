@@ -16,6 +16,7 @@ actions:
     install_homebrew: actions/install_homebrew.sh
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
+    install_sdkman: actions/install_sdkman.sh
 dotfiles:
   f_brewbundle:
     dst: ~/.config/homebrew/Brewfile
@@ -24,6 +25,11 @@ dotfiles:
     - install_xcodecli
     - install_homebrew
     - install_homebrew_bundle
+  f_sdkman:
+    dst:
+    src:
+    actions:
+    - install_sdkman
   f_gitconfig:
     dst: ~/.gitconfig
     src: git/.gitconfig
@@ -56,5 +62,6 @@ profiles:
     - f_zshrc
     - d_zsh
     - f_starship
+    - f_sdkman
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac
