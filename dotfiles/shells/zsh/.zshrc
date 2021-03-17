@@ -17,7 +17,7 @@ export EDITOR=vi
 eval "$(starship init zsh)"
 
 export ASDF_DIR=$(brew --prefix asdf)
-$(brew --prefix asdf)/asdf.sh
+source $(brew --prefix asdf)/asdf.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="{{@@ env['HOME'] @@}}/.sdkman"

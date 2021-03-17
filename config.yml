@@ -70,4 +70,4 @@ profiles:
     - f_sdkman
     - f_alacritty
 
-# eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac
+# eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac && source ~/.zshrc
