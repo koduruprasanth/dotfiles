@@ -10,6 +10,8 @@ fi
 
 source ~/.zsh/aliases.sh
 
+bindkey -e
+
 export EDITOR=vi
 
 # End of Configuration
