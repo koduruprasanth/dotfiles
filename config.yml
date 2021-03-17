@@ -17,6 +17,7 @@ actions:
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
     install_sdkman: actions/install_sdkman.sh
+    install_asdf_plugins: actions/install_asdf_plugins.sh
 dotfiles:
   f_brewbundle:
     dst: ~/.config/homebrew/Brewfile
@@ -25,6 +26,7 @@ dotfiles:
     - install_xcodecli
     - install_homebrew
     - install_homebrew_bundle
+    - install_asdf_plugins
   f_sdkman:
     dst:
     src:
