@@ -53,6 +53,9 @@ dotfiles:
   f_starship:
     dst: ~/.config/starship.toml
     src: shells/prompts/starship.toml
+  f_alacritty:
+    dst: ~/.config/alacritty/alacritty.yml
+    src: alacritty/alacritty.yml
 profiles:
   prasanthk-mac:
     dotfiles:
@@ -65,5 +68,6 @@ profiles:
     - d_zsh
     - f_starship
     - f_sdkman
+    - f_alacritty
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac
