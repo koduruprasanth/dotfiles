@@ -1,3 +1,6 @@
+# Sample command for executing with env overrides
+# eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p personal-mac && source ~/.zshrc
+
 config:
   backup: true
   banner: true
@@ -56,18 +59,38 @@ dotfiles:
   f_alacritty:
     dst: ~/.config/alacritty/alacritty.yml
     src: alacritty/alacritty.yml
+  f_yabai:
+    dst: ~/.config/yabai/yabairc
+    src: yabai/yabairc
+    chmod: 755
 profiles:
-  prasanthk-mac:
+  common-mac:
     dotfiles:
-    - f_brewbundle
-    - f_gitconfig
-    - f_gitignore_global
-    - f_tmux.conf
-    - f_zshenv
-    - f_zshrc
-    - d_zsh
-    - f_starship
-    - f_sdkman
-    - f_alacritty
+      - f_brewbundle
+      - f_gitconfig
+      - f_gitignore_global
+      - f_tmux.conf
+      - f_zshenv
+      - f_zshrc
+      - d_zsh
+      - f_starship
+      - f_sdkman
+      - f_alacritty
+  personal-mac:
+    variables:
+      context: home
+      git_email: koduruprasanth@gmail.com
+      git_name: Prasanth Koduru
+    include:
+      - common-mac
+    dotfiles:
+      - f_yabai
+  work-mac:
+    variables:
+      context: work
+      git_email: prasantk@amazon.com
+      git_name: Prasanth Koduru
+    include:
+      - common-mac
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac && source ~/.zshrc

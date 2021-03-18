@@ -3,7 +3,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 
 cask_args appdir: "~/Applications", require_sha: true
 
@@ -19,8 +18,6 @@ brew "mas"
 brew "starship"
 brew "tmux"
 brew "wget"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
 brew "zsh"
 brew "zsh-syntax-highlighting"
 
@@ -38,3 +35,13 @@ cask "microsoft-edge"
 
 mas "Amphetamine", id: 937984704
 mas "Screen Shade", id: 450429264
+
+{%@@ if context == "home" @@%}
+tap "koekeishiya/formulae"
+
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
+
+{%@@ elif context == "work" @@%}
+
+{%@@ endif @@%}
