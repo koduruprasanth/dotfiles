@@ -5,7 +5,7 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
   autoload -Uz compinit
-  compinit
+  compinit -i
 fi
 
 source ~/.zsh/aliases.sh

@@ -2,8 +2,10 @@
 
 # Common
 alias reload='source ~/.zshrc'
+alias cat='bat'
 
 # Git
+alias lg='lazygit'
 alias gst='git status'
 alias gco='git checkout'
 alias gd='git diff'
