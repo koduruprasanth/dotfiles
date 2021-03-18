@@ -9,6 +9,7 @@ cask_args appdir: "~/Applications", require_sha: true
 brew "asdf"
 brew "bat"
 brew "fd"
+brew "fzf"
 brew "git"
 brew "gitui"
 brew "lazydocker"
@@ -30,7 +31,7 @@ cask "iterm2"
 cask "jetbrains-toolbox"
 cask "sizeup"
 cask "visual-studio-code"
-# cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 cask "microsoft-edge"
 
 mas "Amphetamine", id: 937984704
