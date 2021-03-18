@@ -39,7 +39,7 @@ dotfiles:
     dst: ~/.gitconfig
     src: git/.gitconfig
   f_gitignore_global:
-    dst: ~/.gitignore_globalå
+    dst: ~/.gitignore_global
     src: git/.gitignore_global
   f_tmux.conf:
     dst: ~/.tmux.conf
