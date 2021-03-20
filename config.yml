@@ -21,15 +21,16 @@ actions:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
     install_sdkman: actions/install_sdkman.sh
     install_asdf_plugins: actions/install_asdf_plugins.sh
+    install_osx_defaults: ~/.config/osx/setup_osx_defaults.sh
 dotfiles:
   f_brewbundle:
     dst: ~/.config/homebrew/Brewfile
     src: homebrew/Brewfile
     actions:
-    - install_xcodecli
-    - install_homebrew
-    - install_homebrew_bundle
-    - install_asdf_plugins
+      - install_xcodecli
+      - install_homebrew
+      - install_homebrew_bundle
+      - install_asdf_plugins
   f_sdkman:
     dst:
     src:
@@ -63,6 +64,12 @@ dotfiles:
     dst: ~/.config/yabai/yabairc
     src: yabai/yabairc
     chmod: 755
+  f_osx_defaults:
+    dst: ~/.config/osx/setup_osx_defaults.sh
+    src: ../actions/setup_osx_defaults.sh
+    chmod: 755
+    actions:
+      - install_osx_defaults
 profiles:
   common-mac:
     dotfiles:
@@ -76,6 +83,7 @@ profiles:
       - f_starship
       - f_sdkman
       - f_alacritty
+      - f_osx_defaults
   personal-mac:
     variables:
       context: home
