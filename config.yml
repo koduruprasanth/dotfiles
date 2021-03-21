@@ -17,6 +17,7 @@ actions:
   pre:
     install_xcodecli: actions/install_xcodecli.sh
     install_homebrew: actions/install_homebrew.sh
+    install_zinit: actions/install_zinit.sh
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
     install_sdkman: actions/install_sdkman.sh
@@ -48,6 +49,8 @@ dotfiles:
   f_zshrc:
     dst: ~/.zshrc
     src: shells/zsh/.zshrc
+    actions:
+      - install_zinit
   f_zshenv:
     dst: ~/.zshenv
     src: shells/zsh/.zshenv

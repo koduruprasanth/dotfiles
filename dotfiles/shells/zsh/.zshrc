@@ -1,5 +1,10 @@
 # {{@@ header() @@}}
 
+# Initialize Zinit
+source ~/.zinit/bin/zinit.zsh
+source ~/.zsh/zinit-config.sh
+source ~/.zsh/aliases.sh
+
 # Initialize zsh completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -8,7 +13,7 @@ if type brew &>/dev/null; then
   compinit -i
 fi
 
-source ~/.zsh/aliases.sh
+
 
 bindkey -e
 
