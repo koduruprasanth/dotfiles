@@ -9,7 +9,7 @@ cask_args appdir: "~/Applications", require_sha: true
 brew "asdf"
 brew "bat"
 brew "fd"
-brew "fzf"
+brew "go"
 brew "git"
 brew "gitui"
 brew "lazydocker"

@@ -20,7 +20,6 @@ bindkey -e
 export EDITOR=vi
 
 # End of Configuration
-[ -f ~/.zsh/fzf.zsh ] && source ~/.zsh/fzf.zsh
 eval "$(starship init zsh)"
 
 export ASDF_DIR=$(brew --prefix asdf)
