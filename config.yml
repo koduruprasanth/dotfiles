@@ -1,5 +1,7 @@
 # Sample command for executing with env overrides
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p personal-mac && source ~/.zshrc
+# dotdrop install -c config.yml -p work-mac
+# /Users/prasantk/Library/Python/3.8/bin/dotdrop install -c config.yml -p work-mac && reload
 
 config:
   backup: true
@@ -17,7 +19,6 @@ actions:
   pre:
     install_xcodecli: actions/install_xcodecli.sh
     install_homebrew: actions/install_homebrew.sh
-    install_zinit: actions/install_zinit.sh
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
     install_sdkman: actions/install_sdkman.sh
@@ -49,8 +50,6 @@ dotfiles:
   f_zshrc:
     dst: ~/.zshrc
     src: shells/zsh/.zshrc
-    actions:
-      - install_zinit
   f_zshenv:
     dst: ~/.zshenv
     src: shells/zsh/.zshenv

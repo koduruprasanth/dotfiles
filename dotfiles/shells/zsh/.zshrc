@@ -1,8 +1,6 @@
 # {{@@ header() @@}}
 
-# Initialize Zinit
-source ~/.zinit/bin/zinit.zsh
-source ~/.zsh/zinit-config.sh
+source ~/.zsh/zinit.sh
 source ~/.zsh/aliases.sh
 
 # Initialize zsh completions
@@ -20,7 +18,6 @@ bindkey -e
 export EDITOR=vi
 
 # End of Configuration
-eval "$(starship init zsh)"
 
 export ASDF_DIR=$(brew --prefix asdf)
 source $(brew --prefix asdf)/asdf.sh
