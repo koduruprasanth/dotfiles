@@ -29,8 +29,9 @@ zinit wait lucid light-mode for \
   Aloxaf/fzf-tab
 
 zinit wait"2" lucid as"null" from"gh-r" for \
-    mv"exa* -> exa" sbin  ogham/exa \
-    mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd
+    mv"exa* -> exa" sbin  @ogham/exa \
+    mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd \
+    mv"bat* -> bat" sbin"bat/bat" @sharkdp/bat
 
 zinit lucid for \
     as"command" from"gh-r" atload'eval "$(starship init zsh)"' \

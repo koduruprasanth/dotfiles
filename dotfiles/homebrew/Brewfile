@@ -7,8 +7,6 @@ tap "homebrew/services"
 cask_args appdir: "~/Applications", require_sha: true
 
 brew "asdf"
-brew "bat"
-brew "fd"
 brew "go"
 brew "git"
 brew "gitui"
