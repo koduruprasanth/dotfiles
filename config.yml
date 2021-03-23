@@ -21,7 +21,6 @@ actions:
     install_homebrew: actions/install_homebrew.sh
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
-    install_sdkman: actions/install_sdkman.sh
     install_asdf_plugins: actions/install_asdf_plugins.sh
     install_osx_defaults: ~/.config/osx/setup_osx_defaults.sh
 dotfiles:
@@ -33,11 +32,6 @@ dotfiles:
       - install_homebrew
       - install_homebrew_bundle
       - install_asdf_plugins
-  f_sdkman:
-    dst:
-    src:
-    actions:
-    - install_sdkman
   f_gitconfig:
     dst: ~/.gitconfig
     src: git/.gitconfig
@@ -83,7 +77,6 @@ profiles:
       - f_zshrc
       - d_zsh
       - f_starship
-      - f_sdkman
       - f_alacritty
       - f_osx_defaults
   personal-mac:

@@ -3,8 +3,6 @@
 pip3 install dotdrop --user
 ```
 
-### Brew Installs
-```
-starship
-fzf
-```
+### Todo
+1. Install completions for fd, bat, sdk, fzf
+2. Install asdf through zinit
