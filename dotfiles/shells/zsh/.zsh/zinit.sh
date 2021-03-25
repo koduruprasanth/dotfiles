@@ -1,4 +1,5 @@
 ZINIT_HOME=$HOME/.zinit
+ZINIT_COMPLETIONS_DIR=$ZINIT_HOME/completions
 typeset -g ZPLG_MOD_DEBUG=1
 
 # Ignore insecure directories
@@ -36,9 +37,12 @@ zinit wait lucid light-mode for \
 
 zinit lucid as"null" from"gh-r" for \
     mv"exa* -> exa" sbin  @ogham/exa \
-    mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd \
-    mv"bat* -> bat" sbin"bat/bat" lman cp"**/bat.zsh -> $ZPFX/../completions/_bat" @sharkdp/bat \
+    mv"fd* -> fd" sbin"fd/fd" lman cp"**/_fd -> $ZINIT_COMPLETIONS_DIR"  @sharkdp/fd \
+    mv"bat* -> bat" sbin"bat/bat" lman cp"**/bat.zsh -> $ZINIT_COMPLETIONS_DIR/_bat" @sharkdp/bat \
     atload='eval "$(starship init zsh)"' sbin starship/starship
+
+zinit lucid as"null" for \
+    id-as"exa-completions" lman cp"**/completions.zsh -> $ZINIT_COMPLETIONS_DIR/_exa" @ogham/exa
 
 zplugin ice as"program" pick"$ZPFX/sdkman/bin/sdk" id-as'sdkman' run-atpull \
   atclone"wget https://get.sdkman.io -O scr.sh; SDKMAN_DIR=$ZPFX/sdkman bash scr.sh" \
