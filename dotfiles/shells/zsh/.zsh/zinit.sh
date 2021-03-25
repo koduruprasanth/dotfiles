@@ -19,10 +19,10 @@ zinit light-mode for \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-submods \
     zinit-zsh/z-a-bin-gem-node \
-    zinit-zsh/z-a-rust
+    zinit-zsh/z-a-rust \
+    NICHOLAS85/z-a-linkman 
 
 zinit lucid for \
-    as"program" from"gh-r" atload'eval "$(starship init zsh)"' starship/starship \
     as"program" pick="$ZPFX/bin/(fzf|fzf-tmux)" \
         multisrc"shell/{completion,key-bindings}.zsh" \
         atclone="cp bin/(fzf|fzf-tmux) $ZPFX/bin" \
@@ -37,7 +37,8 @@ zinit wait lucid light-mode for \
 zinit lucid as"null" from"gh-r" for \
     mv"exa* -> exa" sbin  @ogham/exa \
     mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd \
-    mv"bat* -> bat" sbin"bat/bat" @sharkdp/bat
+    mv"bat* -> bat" sbin"bat/bat" lman cp"**/bat.zsh -> $ZPFX/../completions/_bat" @sharkdp/bat \
+    atload='eval "$(starship init zsh)"' sbin starship/starship
 
 zplugin ice as"program" pick"$ZPFX/sdkman/bin/sdk" id-as'sdkman' run-atpull \
   atclone"wget https://get.sdkman.io -O scr.sh; SDKMAN_DIR=$ZPFX/sdkman bash scr.sh" \
