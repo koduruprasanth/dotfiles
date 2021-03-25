@@ -24,11 +24,10 @@ zinit light-mode for \
 zinit lucid for \
     as"program" from"gh-r" atload'eval "$(starship init zsh)"' starship/starship \
     as"program" pick="$ZPFX/bin/(fzf|fzf-tmux)" \
+        multisrc"shell/{completion,key-bindings}.zsh" \
         atclone="cp bin/(fzf|fzf-tmux) $ZPFX/bin" \
-        make="!PREFIX=$ZPFX install" junegunn/fzf
-
-zinit ice wait lucid multisrc"shell/{completion,key-bindings}.zsh" id-as"junegunn/fzf_completions" pick"/dev/null"
-zinit load junegunn/fzf
+        make="!PREFIX=$ZPFX install" \
+        junegunn/fzf
 
 zinit wait lucid light-mode for \
     atinit="zicompinit; zicdreplay" zdharma/fast-syntax-highlighting \

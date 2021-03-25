@@ -15,8 +15,6 @@ cdf() {
    file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
 }
 
-
-
 # Install one or more versions of specified language
 # e.g. `vmi rust` # => fzf multimode, tab to mark, enter to install
 # if no plugin is supplied (e.g. `vmi<CR>`), fzf will list them for you

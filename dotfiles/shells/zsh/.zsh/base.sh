@@ -4,7 +4,9 @@ setopt no_beep
 # Change directory without `cd`
 setopt auto_cd
 
-## History file configuration
+###############################################################################
+# History Configuration                                                       #
+###############################################################################
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 [ "$HISTSIZE" -lt 50000 ] && HISTSIZE=50000
 [ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
