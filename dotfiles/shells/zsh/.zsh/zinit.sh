@@ -39,7 +39,9 @@ zinit lucid as"null" from"gh-r" for \
     mv"exa* -> exa" sbin  @ogham/exa \
     mv"fd* -> fd" sbin"fd/fd" lman cp"**/_fd -> $ZINIT_COMPLETIONS_DIR"  @sharkdp/fd \
     mv"bat* -> bat" sbin"bat/bat" lman cp"**/bat.zsh -> $ZINIT_COMPLETIONS_DIR/_bat" @sharkdp/bat \
-    atload='eval "$(starship init zsh)"' sbin starship/starship
+    atload='eval "$(starship init zsh)"' sbin starship/starship \
+    mv"lazygit* -> lazygit" sbin jesseduffield/lazygit \
+    mv"lazydocker* -> lazydocker" sbin jesseduffield/lazydocker
 
 zinit lucid as"null" for \
     id-as"exa-completions" lman cp"**/completions.zsh -> $ZINIT_COMPLETIONS_DIR/_exa" @ogham/exa
