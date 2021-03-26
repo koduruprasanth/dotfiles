@@ -19,11 +19,16 @@ actions:
   pre:
     install_xcodecli: actions/install_xcodecli.sh
     install_homebrew: actions/install_homebrew.sh
+    install_toolbox: actions/install_toolbox.sh
   post:
     install_homebrew_bundle: brew bundle install --file=~/.config/homebrew/Brewfile
     install_asdf_plugins: actions/install_asdf_plugins.sh
     install_osx_defaults: ~/.config/osx/setup_osx_defaults.sh
 dotfiles:
+  d_bin:
+    dst: ~/bin
+    src: bin
+    chmod: 755
   f_brewbundle:
     dst: ~/.config/homebrew/Brewfile
     src: homebrew/Brewfile
@@ -32,6 +37,11 @@ dotfiles:
       - install_homebrew
       - install_homebrew_bundle
       - install_asdf_plugins
+  f_toolbox:
+    src:
+    dst:
+    actions:
+      - install_toolbox
   f_gitconfig:
     dst: ~/.gitconfig
     src: git/.gitconfig
@@ -95,5 +105,8 @@ profiles:
       git_name: Prasanth Koduru
     include:
       - common-mac
+    dotfiles:
+      - f_toolbox
+      - d_bin
 
 # eval $(cat ~/workspace/dotfiles/env.defaults | grep -v "^#") dotdrop install -c config.yml -p prasanthk-mac && source ~/.zshrc

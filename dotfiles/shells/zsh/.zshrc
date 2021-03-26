@@ -21,6 +21,13 @@ bindkey -e
 
 export EDITOR=vim
 
+{%@@ if context == "home" @@%}
+
+{%@@ elif context == "work" @@%}
+export PATH="$HOME/.toolbox/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+{%@@ endif @@%}
+
 # # End of Configuration
 
 # export ASDF_DIR=$(brew --prefix asdf)

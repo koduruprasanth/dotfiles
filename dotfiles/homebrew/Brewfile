@@ -40,4 +40,7 @@ brew "koekeishiya/formulae/yabai"
 
 {%@@ elif context == "work" @@%}
 
+# Amazon Tap
+tap "amazon/amazon", "ssh://git.amazon.com/pkg/HomebrewAmazon"
+
 {%@@ endif @@%}
